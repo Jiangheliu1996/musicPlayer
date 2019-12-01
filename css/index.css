@@ -1,0 +1,83 @@
+/* 公用样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+/* 清楚浮动 */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 背景图片 */
+.picture {
+    background: url() center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: blur(5px);
+}
+/* 主框架设绝对定位到中间 */
+.layout {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 450px;
+    height: 180px;
+    border: 1px solid #b5efab;
+    background-color: #faedf1;
+    opacity: 0.7;
+}
+
+/* 设置图标的位置格式 */
+.layout .playicon {
+    position: absolute;
+    margin: 30px 10px 10px 20px;
+}
+.layout .playicon i {
+    margin-left: -10px;
+    font-size: 50px;
+}
+
+/* 歌曲信息位置格式 */
+.song.intro {
+    text-align: center;
+    margin-top: 30px;
+    color: #3ae07d;
+}
+.song .name{
+    font-size: 24px;
+}
+.song .author {
+    font-size: 18px;
+}
+
+/* 进度条 */
+.bar {
+    width: 350px;
+    /* position: relative;   这里很重要，看js里面的ontimeupdate事件 */  
+}
+.bar .stopbar {
+    position: absolute;
+    border: 2px solid #919693;
+    width: 350px;
+    margin: 20px 0px 10px 20px;
+}
+.bar .runbar {
+    position: absolute;
+    border: 2px solid #3ae07d;
+    width: 0;
+    margin: 20px 0px 10px 20px;
+}
+
+/* 时间 */
+.timeshow {
+    float: right;
+    margin: 25px 80px 10px 0px;
+}
